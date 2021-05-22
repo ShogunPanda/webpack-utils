@@ -31,10 +31,10 @@
   "types": "types/index.d.ts",
   "scripts": {
     "lint": "eslint src/*.ts",
-    "ci": "yarn lint",
-    "prebuild": "rm -rf dist types && yarn lint",
+    "ci": "npm run lint",
+    "prebuild": "rm -rf dist types && npm run lint",
     "build": "tsc -p . && tsc -p tsconfig.modules.json && renamer --find js --replace mjs dist/mjs/* >> /dev/null && jscodeshift -s --extensions=mjs -t node_modules/@cowtech/esm-package-utils dist/mjs/**",
-    "prepublishOnly": "yarn ci",
+    "prepublishOnly": "npm run ci",
     "postpublish": "git push origin && git push origin -f --tags"
   },
   "dependencies": {

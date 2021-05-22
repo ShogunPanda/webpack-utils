@@ -11,12 +11,14 @@ async function getManifestUrl(compilation) {
 }
 exports.getManifestUrl = getManifestUrl;
 function normalizeAssetPath({ filename }) {
-    const components = filename.split(path_1.sep);
+    let components = filename.split(path_1.sep);
     if (components[0] === 'src') {
         components.shift();
     }
-    else if (components[0] === 'node_modules') {
-        components.splice(0, components[1][0] === '@' ? 3 : 2); // Remove the folder, the scope (if present) and the package
+    else if (components.includes('node_modules')) {
+        // If a package
+        components = components.slice(components.lastIndexOf('node_modules') + 1);
+        components.splice(0, components[1][0] === '@' ? 3 : 2); // Remove the scope (if any) and the package name
     }
     return components.join(path_1.sep).replace(exports.imagesExtensions, '-[contenthash]$&');
 }

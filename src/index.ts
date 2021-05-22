@@ -13,12 +13,15 @@ export async function getManifestUrl(compilation: Compilation): Promise<string> 
 }
 
 export function normalizeAssetPath({ filename }: { filename?: string }): string {
-  const components = filename!.split(sep)
+  let components = filename!.split(sep)
 
   if (components[0] === 'src') {
     components.shift()
-  } else if (components[0] === 'node_modules') {
-    components.splice(0, components[1][0] === '@' ? 3 : 2) // Remove the folder, the scope (if present) and the package
+  } else if (components.includes('node_modules')) {
+    // If a package
+    components = components.slice(components.lastIndexOf('node_modules') + 1)
+
+    components.splice(0, components[1][0] === '@' ? 3 : 2) // Remove the scope (if any) and the package name
   }
 
   return components.join(sep).replace(imagesExtensions, '-[contenthash]$&')
