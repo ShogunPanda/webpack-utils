@@ -1,3 +1,7 @@
+### 2021-08-23 / 1.0.0
+
+- feat: Only export as ESM.
+
 ### 2021-05-22 / 0.1.2
 
 - chore: Use pnpm locally.
