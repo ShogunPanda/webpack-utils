@@ -1,7 +1,7 @@
 # @cowtech/webpack-utils
 
-[![Package Version](https://img.shields.io/npm/v/@cowtech/webpack-utils.svg)](https://npm.im/@cowtech/webpack-utils)
-[![Dependency Status](https://img.shields.io/david/cowtech/webpack-utils)](https://david-dm.org/cowtech/webpack-utils)
+[![Version](https://img.shields.io/npm/v/@cowtech/webpack-utils.svg)](https://npm.im/@cowtech/webpack-utils)
+[![Dependencies](https://img.shields.io/librariesio/release/npm/@cowtech/webpack-utils)](https://libraries.io/npm/@cowtech%2Fwebpack-utils)
 
 CowTech WebPack utility functions.
 
