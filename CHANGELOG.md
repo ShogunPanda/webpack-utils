@@ -1,3 +1,9 @@
+### 2021-11-16 / 1.0.1
+
+- fix: Added ESM note in the README.md
+- chore: Updated badges.
+- fix: Fixed Typescript configuration.
+
 ### 2021-08-23 / 1.0.0
 
 - feat: Only export as ESM.
