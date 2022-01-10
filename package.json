@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@cowtech/eslint-config": "^7.14.5",
-    "@cowtech/esm-package-utils": "^0.9.0",
+    "@cowtech/esm-package-utils": "^0.9.1",
     "@types/node": "^16.7.1",
     "prettier": "^2.3.2",
     "typescript": "^4.3.5"
