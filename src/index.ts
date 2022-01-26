@@ -49,6 +49,6 @@ export function findScriptUrl(compilation: Compilation, path: string, suffixPatt
     return undefined
   }
 
-  const url = files.find((f: string) => f.startsWith(path) && suffixPattern!.test(f))
+  const url = files.find(f => f.startsWith(path) && suffixPattern!.test(f))
   return `/${url}`
 }
