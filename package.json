@@ -41,7 +41,7 @@
     "webpack": "^5.70.0"
   },
   "devDependencies": {
-    "@cowtech/eslint-config": "^8.4.0",
+    "@cowtech/eslint-config": "^8.6.1",
     "@swc/cli": "^0.1.55",
     "@swc/core": "^1.2.150",
     "@types/node": "^17.0.21",
