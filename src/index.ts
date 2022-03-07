@@ -1,11 +1,11 @@
-import { sep } from 'path'
+import { sep } from 'node:path'
 import { Compilation } from 'webpack'
 
 export const cacheName = '@cowtech/webpack'
 
 export const imagesExtensions = /\.(?:bmp|png|jpg|jpeg|gif|svg|webp)$/
 
-export const scriptUrlSuffix = /-(?:(?:[a-f0-9]+)\.mjs)$/i
+export const scriptUrlSuffix = /-[\da-f]+\.mjs$/i
 
 export async function getManifestUrl(compilation: Compilation): Promise<string> {
   const url = await compilation.getCache(cacheName).getPromise<string>('html-webpack-tracker-plugin:manifest', null)
@@ -30,7 +30,7 @@ export function normalizeAssetPath({ filename }: { filename?: string }): string 
 export function generateVersion(): string {
   return new Date()
     .toISOString()
-    .replace(/([-:])|(\.\d+Z$)/g, '')
+    .replace(/([:-])|(\.\d+Z$)/g, '')
     .replace('T', '.')
 }
 
