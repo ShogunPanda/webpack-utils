@@ -1,6 +1,6 @@
 {
   "name": "@cowtech/webpack-utils",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "CowTech WebPack utility functions.",
   "homepage": "https://sw.cowtech.it/webpack-utils",
   "repository": "github:cowtech/webpack-utils",
