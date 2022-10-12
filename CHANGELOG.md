@@ -1,3 +1,8 @@
+### 2022-10-12 / 1.0.8
+
+- fix: Updated types layout.
+- chore: Updated compilation configuration.
+
 ### 2022-08-30 / 1.0.7
 
 - chore: Updated dependencies.
