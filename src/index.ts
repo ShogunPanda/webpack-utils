@@ -30,7 +30,7 @@ export function normalizeAssetPath({ filename }: { filename?: string }): string 
 export function generateVersion(): string {
   return new Date()
     .toISOString()
-    .replace(/([:-])|(\.\d+Z$)/g, '')
+    .replaceAll(/([:-])|(\.\d+Z$)/g, '')
     .replace('T', '.')
 }
 
