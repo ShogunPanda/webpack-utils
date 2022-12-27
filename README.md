@@ -1,5 +1,7 @@
 # @cowtech/webpack-utils
 
+## END OF DEVELOPMENT NOTICE - This package has been discontinued
+
 [![Version](https://img.shields.io/npm/v/@cowtech/webpack-utils.svg)](https://npm.im/@cowtech/webpack-utils)
 [![Dependencies](https://img.shields.io/librariesio/release/npm/@cowtech/webpack-utils)](https://libraries.io/npm/@cowtech%2Fwebpack-utils)
 
